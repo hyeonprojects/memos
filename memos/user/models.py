@@ -1,3 +1,5 @@
+from datetime import datetime, timezone
+
 from django.db import models
 
 
@@ -12,6 +14,10 @@ class User(models.Model):
 
     def __str__(self):
         return 'email: {} & name : {}'.format(self.email, self.name)
+
+    def delete(self, using=None, keep_parents=False):
+        self.deleted_at = datetime.now(timezone.utc)
+        self.save()
 
     class Meta:
         db_table = 'user'
