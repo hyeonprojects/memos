@@ -12,6 +12,7 @@ psycopg = {extras = ["binary"], version = "^3.1.18"}
 djangorestframework = "^3.14.0"
 markdown = "^3.5.2"
 django-filter = "^23.5"
+python-dotenv = "^1.0.1"
 
 
 [build-system]

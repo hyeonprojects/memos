@@ -1,11 +1,9 @@
-from datetime import datetime
-
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from memos.user.models import User
-from memos.user.serializers import UserSerializer
+from .models import User
+from .serializers import UserSerializer
 
 
 class UserList(APIView):
